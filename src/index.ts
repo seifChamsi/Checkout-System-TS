@@ -1,1 +1,1 @@
-console.log("test");
+let message: string = "Hello Wunder mobility";
