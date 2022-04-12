@@ -1,8 +1,8 @@
-// Here we will implement 3 rules :
+// Here we will implement 4 rules :
 // 1- if the total price exceeded 50 EUR the client will get 10%
 // 2- if the client buys two pizza or more the customer have one for free
 // 3- if the client buys two t-shirts, the price of each will drop 5 EUR
-// 4- if the client has a loyalty card than he will have 3% discount on his purchase
+// 4- if the client has a loyalty card then he will have 3% discount on his purchase
 
 import DiscountRules from "../contracts/DiscountRules";
 import Product from "../contracts/Product";
@@ -51,3 +51,5 @@ const PromotionRules: DiscountRules = {
     return totalPrice;
   },
 };
+
+export default PromotionRules;
