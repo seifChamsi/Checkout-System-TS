@@ -16,17 +16,13 @@ const PromotionRules: DiscountRules = {
 
   pizzaRule: (shoppingList: Product[]): Product[] => {
     let pizzaCount = shoppingList.filter((prd: Product) => prd.id === "001");
+
     if (pizzaCount.length >= 2) {
-      let pizzas = 0;
-      for (let i = 0; i < shoppingList.length; i++) {
-        if (shoppingList[i].id == "001" && pizzas == 2) {
-          let freePizza: Product = Object.assign({}, shoppingList[i]);
-          freePizza.price = 0.0;
-          shoppingList[i] = freePizza;
-        } else if (shoppingList[i].id == "001") {
-          pizzas++;
-        }
-      }
+      let freePizzaIndex = shoppingList.lastIndexOf(pizzaCount[0]);
+      let freePizza: Product = Object.assign({}, shoppingList[freePizzaIndex]);
+      freePizza.price = 0.0;
+      shoppingList[freePizzaIndex] = freePizza;
+      return shoppingList;
     }
     return shoppingList;
   },
@@ -46,8 +42,9 @@ const PromotionRules: DiscountRules = {
 
   loyalClientRule: (LoyaltyCardExist: boolean, totalPrice: number): number => {
     if (LoyaltyCardExist) {
-      return (totalPrice *= 0.03);
+      return totalPrice - (totalPrice *= 0.03);
     }
+
     return totalPrice;
   },
 };

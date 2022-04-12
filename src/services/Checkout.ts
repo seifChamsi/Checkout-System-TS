@@ -23,6 +23,7 @@ class Checkout {
       this._shoppingList.forEach((product) => {
         this._totalPrice += product.price;
       });
+
       let isClientHaveLoyaltyCard = true;
       this._totalPrice = this.applyPromotionRuleAfterCheckout(
         isClientHaveLoyaltyCard,
