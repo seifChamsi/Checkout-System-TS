@@ -26,3 +26,11 @@ For meeting expectations mentionned:
 
 The src/index.ts is where the main algorithm is running :
 1- scan shopping list 2- applying promotionRules 3-logging the final price after applying promotionRules
+
+
+# promotionRules
+
+- 1- if the total price exceeded 50 EUR the client will get 10%
+- 2- if the client buys two pizza or more the client will have one for free
+- 3- if the client buys two t-shirts, the price of each will drop 5 EUR
+- 4- if the client has a loyalty card then he will have 3% discount on his purchase
