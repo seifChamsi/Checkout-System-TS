@@ -5,6 +5,7 @@
 - Start your terminal :
 
 ```bash
+$ git clone https://github.com/seifChamsi/Checkout-System-TS.git
 $ npm install
 $ npm run dev
 ```
