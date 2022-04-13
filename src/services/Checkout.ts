@@ -1,6 +1,7 @@
 import DiscountRules from "../contracts/DiscountRules";
 import Product from "../contracts/Product";
 
+//main Checkout class that will take care of our main buisness logic
 class Checkout {
   _shoppingList: Product[] = [];
   _promotionalRules: DiscountRules;
